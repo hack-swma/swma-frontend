@@ -36,12 +36,12 @@ export const sliderUnderText = styled(sliderText)`
     bottom: 5%;
 `
 export const navigateButton = styled.button`
-    width: 600px;
-    height: 75px;
+    width: 550px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 34px;
+    font-size: 32px;
     color: white;
     background-color: #0066FF;
     border: none;

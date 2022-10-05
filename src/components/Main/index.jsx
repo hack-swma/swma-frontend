@@ -1,4 +1,7 @@
 import * as style from './index.style';
+
+import { Link } from 'react-router-dom';
+
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
@@ -34,7 +37,9 @@ const Render = () => {
                     })
                 }
             </style.slider>
-            <style.navigateButton>같이 떠날 사람 찾아보기</style.navigateButton>
+            <Link to='/lobby'>
+                <style.navigateButton>같이 떠날 사람 찾아보기</style.navigateButton>
+            </Link>
         </style.background>
     )
 }

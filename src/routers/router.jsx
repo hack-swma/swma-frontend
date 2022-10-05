@@ -11,8 +11,9 @@ const Router = () => {
         nav: false,
         footer: false
     })
+    console.log(location)
     useLayoutEffect((element) => {
-        let temp = routes.find(element => element.path === location.pathname.split('/')[1])
+        let temp = routes.find(element => element.path === location.pathname)
         if (temp === undefined) {
             temp = routes.find(element => element.path === '*')
         }

@@ -6,7 +6,7 @@ import Signup from '../components/Auth/signup/index'
 import Lobby from '../components/Lobby/index'
 
 export default [
-    { path: '', component: <Main/>, nav: true, footer: true },
+    { path: '/', component: <Main/>, nav: true, footer: true },
     { path: '*', component: <Notfound/>, nav: false, footer: false },
     { path: '/mypage', component: <Mypage/>, nav: true, footer: true },
     { path: '/signin', component: <Signin/>, nav: false, footer: false },

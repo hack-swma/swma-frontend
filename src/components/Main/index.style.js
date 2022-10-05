@@ -6,12 +6,11 @@ export const background = styled.div`
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     position: relative;
     background-color: white;
 `
 export const slider = styled(Slider)`
-    width: 1100px;
+    width: 100vw;
     height: 550px;
     display: flex;
     .slick-dots {

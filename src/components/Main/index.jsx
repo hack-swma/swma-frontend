@@ -9,7 +9,7 @@ import axios from 'axios'
 const Render = () => {
     const colorList = ['red', 'orange', 'yellow']
     const settings = {
-        arrows: true,
+        arrows: false,
         dots: true,
         infinite: true,
         slidesToShow: 1,

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-
+import Nav from '../common/Nav/index'
 import sliderImage1 from '../../images/Main/sliderImage1.png'
 import sliderImage2 from '../../images/Main/sliderImage2.png'
 import sliderImage3 from '../../images/Main/sliderImage3.png'
@@ -20,6 +20,8 @@ const Render = () => {
         autoplaySpeed: 5000  
     };
     return (
+        <>
+        <Nav/>
         <style.background>
             <style.slider {...settings}>
                 {
@@ -41,6 +43,7 @@ const Render = () => {
                 <style.navigateButton>같이 떠날 사람 찾아보기</style.navigateButton>
             </Link>
         </style.background>
+        </>
     )
 }
 export default Render;

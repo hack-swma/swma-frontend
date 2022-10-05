@@ -1,11 +1,13 @@
 import * as style from './index.style'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 const Render = () => {
+    const nav = useNavigate();
+    const golog = () => {
+        nav('signin');
+    }
     return (
         <style.background>
-            <Link to='signin'>
-                <h1>Log in</h1>
-            </Link>
+                <h1 onClick={golog}>Log in</h1>
         </style.background>
     )
 }

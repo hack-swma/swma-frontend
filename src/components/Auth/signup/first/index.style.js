@@ -17,38 +17,60 @@ export const loginbox = styled.div`
     background-color: white;
     border-radius: 10px;
     > h1 {
-        margin-left: 725px;
+        margin-left: 47vw;
         margin-top: 42px;
     }
     > .idp {
-        margin-left: 730px;
+        margin-left: 700px;
         margin-top: 50px;
         color: #AFAFAF;
     }
     > .id {
-        margin-left: 730px;
-        width: 16vw;
+        margin-left: 700px;
+        width: 21vw;
         height: 7vh;
         font-size: 15px;
         padding-left: 15px;
     }
+    > button {
+        position: absolute;
+        margin-left: 20px;
+        width: 80px;
+        height: 7vh;
+        border: 0;
+        border-radius: 3px;
+        background-color: #597DFF;
+        > text {
+            color: white;
+        }
+        :hover {
+            cursor: pointer;
+        }
+    }
     > .pwp {
-        margin-left: 730px;
-        margin-top: 35px;
+        margin-left: 700px;
+        margin-top: 20px;
         color: #AFAFAF;
     }
     > .pw {
-        margin-left: 730px;
-        width: 16vw;
+        margin-left: 700px;
+        width: 21vw;
         height: 7vh;
         font-size: 15px;
         padding-left: 15px;
     }
-    > .log{
+    > .pwc {
+        margin-left: 700px;
+        width: 21vw;
+        height: 7vh;
+        font-size: 15px;
+        padding-left: 15px;
+    }
+    > .nextb {
         display: flex;
-        margin-left: 730px;
-        margin-top: 60px;
-        width: 16vw;
+        margin-left: 46vw;
+        margin-top: 7vh;
+        width: 20vw;
         height: 7vh;
         border: 0px;
         border-radius: 10px;
@@ -62,25 +84,6 @@ export const loginbox = styled.div`
             cursor: pointer;
         }
     }
-    > .sign {
-        display: flex;
-        margin-left: 730px;
-        margin-top: 20px;
-        width: 16vw;
-        height: 7vh;
-        border: 0;
-        border-radius: 10px;
-        background-color: whitesmoke;
-        > text{
-            color: black;
-            font-size: 20px;
-            margin: auto;
-        }
-        :hover {
-            cursor: pointer;
-        }
-    }
-
 `
 
 export const whemanchu = styled.div`

@@ -17,47 +17,9 @@ export const loginbox = styled.div`
     background-color: white;
     border-radius: 10px;
     > h1 {
-        margin-left: 725px;
+        margin-left: 47vw;
         margin-top: 42px;
     }
-    > .idp {
-        margin-left: 700px;
-        margin-top: 50px;
-        color: #AFAFAF;
-    }
-    > .id {
-        margin-left: 700px;
-        width: 16vw;
-        height: 7vh;
-        font-size: 15px;
-        padding-left: 15px;
-    }
-    > button {
-        position: absolute;
-        margin-left: 20px;
-        width: 80px;
-        height: 7vh;
-    }
-    > .pwp {
-        margin-left: 700px;
-        margin-top: 35px;
-        color: #AFAFAF;
-    }
-    > .pw {
-        margin-left: 700px;
-        width: 16vw;
-        height: 7vh;
-        font-size: 15px;
-        padding-left: 15px;
-    }
-    > .pwc {
-        margin-left: 700px;
-        width: 16vw;
-        height: 7vh;
-        font-size: 15px;
-        padding-left: 15px;
-    }
-    
 `
 
 export const whemanchu = styled.div`

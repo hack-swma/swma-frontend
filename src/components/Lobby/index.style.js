@@ -57,7 +57,53 @@ export const postContainer = styled.div`
     width: 100%;
     aspect-ratio: 1 / 0.25;
     max-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border: 5px solid #DADADA;
-    border-radius: 20px;
-    
+    border-radius: 20px;   
+    padding-left: 25px;
+    padding-right: 25px;
+`
+export const postProfileImageContainer = styled.div`
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+export const postProfileImage = styled.img`
+    height: 90%;
+    max-height: 150px;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+`
+export const postProfileInfoContainer = styled.div`
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+`
+export const postProfileInfoName = styled.span`
+    font-size: 48px;
+    font-weight: bold;
+`
+export const postProfileInfoLocation = styled.span`
+    font-size: 30px;
+    color: gray;
+`
+export const postProfileViewProfileMessageContainer = styled.div`
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+export const postProfileViewProfileMessage = styled.span`
+    font-size: 40px;
+    color: darkgray;
+    text-overflow: clip;
 `

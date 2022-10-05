@@ -23,13 +23,12 @@ export const slider = styled(Slider)`
             color: #ee0000;
         }
     }
-    .slick-arrow {
-        background-color: gray;
-        height: 100%;
-        &:active {
-            background-color: black;
-        }
-    }
+`
+export const sliderImage = styled.div`
+    width: 100%;
+    height: 550px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url(${(props) => props.bg});
+    background-size: cover;
 `
 export const sliderContent = styled.div`
     height: 300px;

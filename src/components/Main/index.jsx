@@ -1,10 +1,11 @@
 import * as style from './index.style';
-
-import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
+import Slider from 'react-slick';
 import axios from 'axios'
+
+import sliderImage1 from '../../images/Main/sliderImage1.png'
 
 const Render = () => {
     const colorList = ['red', 'orange', 'yellow']
@@ -18,9 +19,9 @@ const Render = () => {
     return (
         <style.background>
             <style.slider {...settings}>
-                <div>asd</div>
-                <div>asd</div>
-                <div>asd</div>
+                <style.sliderImage bg={sliderImage1}/>
+                <style.sliderImage bg={sliderImage1}/>
+                <style.sliderImage bg={sliderImage1}/>
             </style.slider>
         </style.background>
     )

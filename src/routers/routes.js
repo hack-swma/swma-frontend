@@ -1,8 +1,8 @@
 import Main from '../components/Main/index'
 import Notfound from '../components/Notfound/index'
 import Mypage from '../components/Mypage/index'
-import Signin from '../components/Auth/Signin/index'
-import Signup from '../components/Auth/Signup/index'
+import Signin from '../components/Auth/signin/index'
+import Signup from '../components/Auth/signup/index'
 import Lobby from '../components/Lobby/index'
 
 export default [

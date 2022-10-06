@@ -8,6 +8,7 @@ import Nav from '../common/Nav/index'
 import sliderImage1 from '../../images/Main/sliderImage1.png'
 import sliderImage2 from '../../images/Main/sliderImage2.png'
 import sliderImage3 from '../../images/Main/sliderImage3.png'
+import { useNavigate } from 'react-router-dom';
 
 const Render = () => {
     const sliderImageList = [sliderImage1, sliderImage2, sliderImage3]
@@ -19,6 +20,10 @@ const Render = () => {
         autoplay: true,
         autoplaySpeed: 5000  
     };
+    const nav = useNavigate();
+    const golob = () => {
+        nav('/lobby');
+    }
     return (
         <>
         <Nav/>
@@ -33,7 +38,7 @@ const Render = () => {
                                 </p>
                                 <style.sliderText color='#00ffc2'>함께 할 사람</style.sliderText>
                                 <style.sliderText>이 없다면?</style.sliderText>
-                                <style.sliderUnderText>바로가기 →</style.sliderUnderText>
+                                <style.sliderUnderText onClick={golob}><text>바로가기 →</text></style.sliderUnderText>
                             </style.sliderImage>
                         )
                     })

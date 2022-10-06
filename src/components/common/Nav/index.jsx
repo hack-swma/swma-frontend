@@ -5,9 +5,13 @@ const Render = () => {
     const golog = () => {
         nav('signin');
     }
+    const gomain = () => {
+        nav('/');
+    }
     return (
         <style.background>
-                <h1 onClick={golog}>Log in</h1>
+            <h1 onClick={gomain}>외만추</h1>
+            <h2 onClick={golog}>Log in</h2>
         </style.background>
     )
 }

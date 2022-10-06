@@ -31,9 +31,14 @@ export const sliderText = styled.span`
 `
 export const sliderUnderText = styled(sliderText)`
     position: absolute;
-    font-size: 48px;
     right: 5%;
     bottom: 5%;
+    > text {
+        font-size: 48px;
+        :hover {
+            cursor: pointer;
+        }
+    }
 `
 export const navigateButton = styled.button`
     width: 550px;

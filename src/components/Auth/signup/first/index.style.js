@@ -17,7 +17,7 @@ export const loginbox = styled.div`
     background-color: white;
     border-radius: 10px;
     > .box{
-        margin-left: 50%;
+        margin-left: 55%;
     > h1 {
         margin-top: 42px;
     }

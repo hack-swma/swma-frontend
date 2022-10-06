@@ -30,6 +30,14 @@ export let descriptionState = atom({
     key: 'description',
     default: ''
 })
+export let regionState = atom({
+    key: 'region',
+    default: ''
+})
+export let conState = atom({
+    key: 'country',
+    default: ''
+})
 
 
 // Mypage

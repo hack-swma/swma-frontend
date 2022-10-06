@@ -19,100 +19,131 @@ export const loginbox = styled.div`
     > .box {
     > h1 {
         margin-left: 47vw;
-        margin-top: 42px;
+        margin-top: 3%;
     }
     > h2 {
+        position: absolute;
         font-size: 30px;
         margin-lefT: 54vw;
-        margin-top: -2vh;
+        margin-top: 0%;
     }
     > .name {
+        position: absolute;
         margin-left: 45.4vw;
-        margin-top: 1vh;
+        margin-top: 3%;
         color: #AFAFAF;
+        font-size: calc((100vw / 1240) * 15);
     }
     > .named {
+        position: absolute;
+        margin-top: 5.5%;
         margin-left: 45.4vw;
-        width: 21vw;
-        height: 7vh;
+        width:  20%;
+        height: 6%;
         font-size: 13px;
         padding-left: 10px;
     }
     > .birthday {
+        position: absolute;
         margin-left: 45.4vw;
-        margin-top: 20px;
+        margin-top: 10%;
         color: #AFAFAF;
+        font-size: calc((100vw / 1240) * 15);
     }
     > .birthdaye {
+        position: absolute;
         margin-left: 45.4vw;
-        width: 10vw;
-        height: 7vh;
+        margin-top: 12.5%;
+        width:  calc((100vw / 1240) * 120);
+        height: calc((100vh / 1240) * 80);
         font-size: 13px;
         padding-left: 10px;
     }
     > .gender {
+        position: absolute;
         margin-left: 57vw;
-        margin-top: -12vh;
+        margin-top: 10%;
         color: #AFAFAF;
+        font-size: calc((100vw / 1240) * 15);
     }
     > .gendered {
+        position: absolute;
         margin-left: 57vw;
-        margin-top: 30px;
+        margin-top: 13.5%;
+        width: 5%;
         > .genderone{
             > input[type=radio] {
-                margin-top: 0vh;
+                position: absolute;
                 margin-left: 0vw;
                 border: 0px;
                 width: 20px;
                 height: 20px;
             }
             > span {
+                position: absolute;
                 display: flex;
-                margin-top: -3.6vh;
                 margin-left: 1.8vw;
                 font-size: 20px;
                 font-weight: bold;
             }
         }
         > .gendertwo {
+            margin-left: 100%;
             > input[type=radio] {
                 position: absolute;
-                margin-top: -3.1vh;
-                margin-left: 5vw;
                 border: 0px;
                 width: 20px;
                 height: 20px;
             }
             > span {
+                position: absolute;
                 display: flex;
-                margin-top: -3.4vh;
-                margin-left: 7vw;
+                margin-left: 140%;
                 font-size: 20px;
                 font-weight: bold;
             }
         }
     }
     .language {
+        position: absolute;
         margin-left: 45.4vw;
-        margin-top: 5vh;
+        margin-top: 17%;
         color: #AFAFAF;
     }
     >  .checkboxes {
+        position: absolute;
         margin-left: 45.2vw;
-        width: 17vw;
+        margin-top: 19%;
+        width: calc((100vw / 1240) * 130);
         > label {
             > input[type=checkbox] {
                 width: 20px;
                 height: 15px;
             }
             > text {
-                font-size: 20px;
+                fposition: absolute;
+                margin-left: 0%;
+                font-size: 10px;
                 font-weight: bold;
             }
         }
     }
+    > .region {
+        position: absolute;
+        margin-left: 57vw;
+        margin-top: 17%;
+        color: #AFAFAF;
+    }
+    > .selectc {
+        position: absolute;
+        margin-left: 57vw;
+        margin-top: 19.5%;
+        width: 8%;
+        height: 4%;
+    }
     .nextb {
-        margin-top: 6vh;
+        position: absolute;
+        margin-top: 28%;
         margin-left: 46vw;
         width: 20vw;
         height: 7vh;

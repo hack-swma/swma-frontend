@@ -1,7 +1,7 @@
 import * as style from './index.style';
 
 import { useRecoilState } from 'recoil';
-import { nameState, birthinfoState, sexState } from '../../../../stores/atom';
+import { nameState, birthinfoState, sexState, conState, regionState } from '../../../../stores/atom';
 
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -10,29 +10,22 @@ const Render = () => {
     const [name, setName] = useRecoilState(nameState)
     const [birthinfo, setBirthinfo] = useRecoilState(birthinfoState)
     const [sex, setSex] = useRecoilState(sexState)
-
+    const [country, setCountry] = useRecoilState(conState)
+    const [region, setRegion] = useRecoilState(regionState)
     useEffect(() => {
         setName('')
         setBirthinfo('')
         setSex('')
+        setRegion('')
     }, [])
-
     const L_LIST = [
-        { id: 0, data: '한국어' },
-        { id: 1, data: '일본어' },
-        { id: 2, data: '중국어' },
-        { id: 3, data: '불어' },
-        { id: 4, data: '영어' },
-        { id: 5, data: '독일어' },
+        { id: 0, data: '한국어', datas: 'KOREAN' },
+        { id: 1, data: '일본어', datas: 'JAPANESE' },
+        { id: 2, data: '중국어', datas: 'CHINESE' },
+        { id: 3, data: '불어', datas: 'FRENCH' },
+        { id: 4, data: '영어', datas: 'ENGLISH' },
+        { id: 5, data: '독일어', datas: 'GERMAN' },
     ]
-    const koreanToEnglist = {
-        '한국어': 'KOREAN',
-        '일본어': 'JAPANESE',
-        '중국어': 'CHINESE',
-        '불어': 'FRENCH',
-        '영어': 'ENGLISH',
-        '독일어': 'GERMAN',
-    }
     const nav = useNavigate();
     const thirdsign = () => {
         nav('/signup3')
@@ -48,6 +41,14 @@ const Render = () => {
             setCheckedList(checkedList.filter(el => el !== item));
         }
     };
+    const male = () => {
+        setSex('MALE');
+    }
+    const female = () => {
+        setSex('FEMALE');
+    }
+    const regionchange = () => {
+    }
     console.log(checkedList)
     return (
         <style.background>
@@ -60,17 +61,17 @@ const Render = () => {
                     <h1>Welcome to 외만추</h1>
                     <h2>2/4</h2>
                     <p className='name'>이름</p>
-                    <input className='named' placeholder='ex) 외만추' value={name} onChange={(e) => {setName(e.target.value)}}/>
+                    <input className='named' placeholder='ex) 외만추' value={name} onChange={(e) => { setName(e.target.value) }} />
                     <p className='birthday'>생년월일</p>
-                    <input className='birthdaye' placeholder='ex) 20000103' value={birthinfo} onChange={(e) => {setBirthinfo(e.target.value)}}/>
+                    <input className='birthdaye' placeholder='ex) 20000103' value={birthinfo} onChange={(e) => { setBirthinfo(e.target.value) }} />
                     <p className='gender'>성별</p>
                     <div className='gendered'>
                         <label className='genderone'>
-                            <input type="radio" name='gendering' value="남" />
+                            <input type="radio" name='gendering' value="MALE" onClick={male} />
                             <span>남</span>
                         </label>
                         <label className='gendertwo'>
-                            <input type="radio" name='gendering' value="여" />
+                            <input type="radio" name='gendering' value="FEMALE" onClick={female} />
                             <span>여</span>
                         </label>
                     </div>
@@ -81,17 +82,21 @@ const Render = () => {
                                 <label key={item.id}>
                                     <input
                                         type="checkbox"
-                                        value={item.data}
+                                        value={item.datas}
                                         onChange={e => {
                                             onCheckedElement(e.target.checked, e.target.value);
                                         }}
-                                        checked={checkedList.includes(item.data) ? true : false}
+                                        checked={checkedList.includes(item.datas) ? true : false}
                                     />
                                     <text>{item.data}</text>
                                 </label>
                             );
                         })}
                     </div>
+                    <p className='region'>지역</p>
+                    <input type="text" placeholder='지역입력' className='selectc' onChange={e => {
+                        regionchange(e);
+                    }}/>
                     <button className='nextb' onClick={thirdsign}><text>Next →</text></button>
                 </div>
             </style.loginbox>

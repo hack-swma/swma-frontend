@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import axios from 'axios'
 
@@ -14,13 +14,13 @@ import * as style from './index.style';
 
 const Render = () => {
     const countryList = ['국가 선택', '대한민국', '미국', '일본', '중국', '러시아', '프랑스', '독일', '캐나다']
+    const [dataList, setDataList] = useState([])
     const dummyData = {
         name: '사람이름',
         location: 'Japan',
         from: 'South Korea',
         profileImage: Image,
     }
-    const postList = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     
     useEffect(() => {
         AOS.init()
@@ -36,13 +36,13 @@ const Render = () => {
             })
             .then((response) => {
                 console.log(response)
+                setDataList(response.data.userResponses)
             }).catch((error) => {
                 console.log(error)
             })
         }
         getProfileList()
     }, [])
-
     return (
         <style.background>
             <style.mainWrapper>
@@ -69,21 +69,21 @@ const Render = () => {
                     </style.regionSelectButton>
                 </style.regionButtonContainer>
                 <style.postWrapper data-aos='fade-up' data-aos-delay='1500'>
-                    { postList.map((element, idx) => {
+                    { dataList.map((element, idx) => {
                         return (
                             <style.postContainer data-aos='fade-up'>
                                 <style.postProfileImageContainer>
-                                    <style.postProfileImage src={dummyData.profileImage}/>
+                                    <style.postProfileImage src={Image}/>
                                 </style.postProfileImageContainer>
                                 <style.postProfileInfoContainer>
-                                    <style.postProfileInfoName>{dummyData.name}</style.postProfileInfoName>
+                                    <style.postProfileInfoName>{element.name}</style.postProfileInfoName>
                                     <style.postProfileInfoLocationContainer>
                                         <style.postProfileInfoLocationIcon src={locationIcon}/>
-                                        <style.postProfileInfoLocation>{dummyData.location}</style.postProfileInfoLocation>
+                                        <style.postProfileInfoLocation>{element.live}</style.postProfileInfoLocation>
                                     </style.postProfileInfoLocationContainer>
                                     <style.postProfileInfoLocationContainer>
                                         <style.postProfileInfoLocationIcon src={nationIcon}/>
-                                        <style.postProfileInfoLocation>{dummyData.from}</style.postProfileInfoLocation>
+                                        <style.postProfileInfoLocation>{element.live}</style.postProfileInfoLocation>
                                     </style.postProfileInfoLocationContainer>
                                 </style.postProfileInfoContainer>
                                 <style.postProfileViewProfileMessage>프로필 보기</style.postProfileViewProfileMessage>

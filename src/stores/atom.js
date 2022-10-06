@@ -57,6 +57,13 @@ export let userInfoState = atom({
     }
 })
 
+// board
+export let boardIdState = atom({
+    key: 'boardId',
+    default: 0
+})
+
+
 
 // Mypage
 

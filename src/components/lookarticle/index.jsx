@@ -4,31 +4,45 @@ import Person from '../../images/Write/person.png';
 import Calender from '../../images/Write/calender.png';
 import prof from '../../images/Write/profiles.png'
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { useRecoilState } from 'recoil';
+import { boardIdState } from '../../stores/atom';
+import { useEffect, useState } from 'react';
+import Image from '../../images/Main/basicProfileImage.png'
 const Render = () => {
-    const title = '저랑 오늘 시애틀에서 노실 분';
-    const insert = '심심한데 오늘 저랑 12시 ~ 6시에 시애틀 국밥집 앞에서 만나서 국밥 한그릇 조지고 같이 노래방 때릴 분 연락주세요';
-    const numbers = 3;
-    const Month = '10';
-    const Day = '06';
+    const [boardId, setBoardId] = useRecoilState(boardIdState)
+    const [data, setData] = useState('')
     const nav = useNavigate();
     const goprof = () => {
         nav('/profile')
     }
+    useEffect(() => {
+        axios.get(`post/${localStorage.getItem('boardId')}`, {
+            headers: {
+                Authorization: localStorage.getItem('token')
+            }
+        }).then((res) => {
+            console.log(res)
+            setData(res.data)
+        }).catch((err) => {
+            console.log(err)
+        })
+    })
     return(
         <style.background>
             <style.bigbox>
                 <style.littlebox>
-                    <h1>{title}</h1>
-                    <img src={Locationes} className='locate'/><h3 className='place'>시애틀 국밥집</h3>
-                    <img src={Person} className='persone'/><h3 className='num'>{numbers}명</h3>
-                    <img src={Calender} className='cal' /><h3 className='calen'>{Month}-{Day}</h3>
+                    <h1>{data.title}</h1>
+                    <img src={Locationes} className='locate'/><h3 className='place'>{data.live}</h3>
+                    <img src={Person} className='persone'/><h3 className='num'>{data.member}명</h3>
+                    <img src={Calender} className='cal' /><h3 className='calen'>{data.date}</h3>
                     <div className='lined'/>
                     <style.writer>
-                        <h2>작성자</h2>
-                        <img src={prof} onClick={goprof}></img>
+                        <h2>{data.name}</h2>
+                        <img src={Image} onClick={goprof}></img>
                     </style.writer>
                     <style.textfield>
-                        {insert}
+                        {data.content}
                     </style.textfield>
                     <button className='letchat'><text>대화하기</text></button>
                 </style.littlebox>

@@ -2,6 +2,7 @@ import styled from 'styled-components'
 export const background = styled.div`
     width: 100vw;
     height: 75px;
+    display: flex;
     border-bottom: 3px solid black;
     border-color: black;
     > h1 {
@@ -13,6 +14,7 @@ export const background = styled.div`
     }
     > h2 {
         position: absolute;
+        margin-bottom: 30px;
         margin-left: 90vw;
         :hover {
             cursor: pointer;
@@ -20,5 +22,8 @@ export const background = styled.div`
     }
 `
 export const normalText = styled.span`
-    
+    position: absolute;
+    right: 13vw;
+    top: 25px;
+    cursor: pointer;
 `

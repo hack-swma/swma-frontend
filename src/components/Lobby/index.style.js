@@ -18,6 +18,11 @@ export const mainWrapper = styled.div`
     margin-top: 100px;
     gap: 20px;
 `
+export const writeButton = styled.span`
+    position: absolute;
+    right: 5%;
+    top: 5%;
+`
 export const textContainer = styled.div`
     display: flex;
     align-items: center;
@@ -34,8 +39,23 @@ export const titleText = styled.span`
 `
 export const regionButtonContainer = styled.div`
     width: 100%;
-    justify-content: flex-start;
-    appearance: none;
+    display: flex;
+    justify-content: space-between;
+`
+export const selectContainer = styled.div`
+    width: 30%;
+    display: flex;
+    padding-left: 5px;
+    padding-right: 3px;
+`
+export const selectButton = styled.button`
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: none;
+    cursor: pointer;
 `
 export const regionSelectButton = styled.select`
     width: 15%;

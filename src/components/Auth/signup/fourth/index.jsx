@@ -8,7 +8,7 @@ import { useRecoilState } from 'recoil'
 import { idState, passwordState, checkingPasswordState, nameState, birthinfoState, sexState, descriptionState, countryState, regionState, languageState } from '../../../../stores/atom'
 
 import uploadbutton from '../../../../images/Main/uploade.png'
-import img from '../../../../images/Main/Group 65.png'
+import img from '../../../../images/Main/basicProfileImage.png'
 import IPINJ from './ipmodal/index2';
 const Render = () => {
     const [id, setId] = useRecoilState(idState)

@@ -19,3 +19,6 @@ export const background = styled.div`
         }
     }
 `
+export const normalText = styled.span`
+    
+`

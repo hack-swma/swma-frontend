@@ -1,3 +1,4 @@
+import basicProfileImage from '../images/Main/basicProfileImage.png'
 import { atom } from 'recoil'
 
 // Auth
@@ -41,6 +42,19 @@ export let regionState = atom({
 export let countryState = atom({
     key: 'country',
     default: ''
+})
+
+// GlobalState
+export let isLogginginState = atom({
+    key: 'isLoggingin',
+    default: false
+})
+export let userInfoState = atom({
+    key: 'userInfo',
+    default: {
+        id: '',
+        profileImage: basicProfileImage,
+    }
 })
 
 

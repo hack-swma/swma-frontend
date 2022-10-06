@@ -5,7 +5,7 @@ import { descriptionState } from '../../../../stores/atom';
 
 import { useNavigate } from 'react-router-dom';
 import uploadbutton from '../../../../images/Main/uploade.png'
-import img from '../../../../images/Main/Group 65.png'
+import img from '../../../../images/Main/basicProfileImage.png'
 import { useState, useRef, useEffect } from 'react';
 const Render = () => {
     const nav = useNavigate();

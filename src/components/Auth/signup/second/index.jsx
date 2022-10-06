@@ -47,7 +47,9 @@ const Render = () => {
     const female = () => {
         setSex('FEMALE');
     }
-    const regionchange = () => {
+    const regionchange = (e) => {
+        setRegion(e.target.value);
+        console.log(region);
     }
     console.log(checkedList)
     return (
@@ -94,9 +96,7 @@ const Render = () => {
                         })}
                     </div>
                     <p className='region'>지역</p>
-                    <input type="text" placeholder='지역입력' className='selectc' onChange={e => {
-                        regionchange(e);
-                    }}/>
+                    <input type="text" placeholder='지역입력' className='selectc' onChange={regionchange}/>
                     <button className='nextb' onClick={thirdsign}><text>Next →</text></button>
                 </div>
             </style.loginbox>

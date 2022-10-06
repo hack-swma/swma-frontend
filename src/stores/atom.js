@@ -26,6 +26,10 @@ export let sexState = atom({
     key: 'sex',
     default: ''
 })
+export let languageState = atom({
+    key: 'language',
+    default: []
+})
 export let descriptionState = atom({
     key: 'description',
     default: ''
@@ -34,7 +38,7 @@ export let regionState = atom({
     key: 'region',
     default: ''
 })
-export let conState = atom({
+export let countryState = atom({
     key: 'country',
     default: ''
 })

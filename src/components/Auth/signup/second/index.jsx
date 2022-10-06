@@ -1,7 +1,7 @@
 import * as style from './index.style';
 
 import { useRecoilState } from 'recoil';
-import { nameState, birthinfoState, sexState, conState, regionState } from '../../../../stores/atom';
+import { nameState, birthinfoState, sexState, countryState, regionState, languageState } from '../../../../stores/atom';
 
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -10,13 +10,15 @@ const Render = () => {
     const [name, setName] = useRecoilState(nameState)
     const [birthinfo, setBirthinfo] = useRecoilState(birthinfoState)
     const [sex, setSex] = useRecoilState(sexState)
-    const [country, setCountry] = useRecoilState(conState)
+    const [country, setCountry] = useRecoilState(countryState)
     const [region, setRegion] = useRecoilState(regionState)
+    const [languages, setLanguages] = useRecoilState(languageState);
     useEffect(() => {
         setName('')
         setBirthinfo('')
         setSex('')
         setRegion('')
+        setLanguages([])
     }, [])
     const L_LIST = [
         { id: 0, data: '한국어', datas: 'KOREAN' },
@@ -33,12 +35,11 @@ const Render = () => {
     const gomain = () => {
         nav('/')
     };
-    const [checkedList, setCheckedList] = useState([]);
     const onCheckedElement = (checked, item) => {
         if (checked) {
-            setCheckedList([...checkedList, item]);
+            setLanguages([...languages, item]);
         } else if (!checked) {
-            setCheckedList(checkedList.filter(el => el !== item));
+            setLanguages(languages.filter(el => el !== item));
         }
     };
     const male = () => {
@@ -51,7 +52,7 @@ const Render = () => {
         setRegion(e.target.value);
         console.log(region);
     }
-    console.log(checkedList)
+    console.log(languages)
     return (
         <style.background>
             <style.loginbox>
@@ -88,7 +89,7 @@ const Render = () => {
                                         onChange={e => {
                                             onCheckedElement(e.target.checked, e.target.value);
                                         }}
-                                        checked={checkedList.includes(item.datas) ? true : false}
+                                        checked={languages.includes(item.datas) ? true : false}
                                     />
                                     <text>{item.data}</text>
                                 </label>

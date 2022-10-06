@@ -16,7 +16,7 @@ const Render = () => {
         <style.background>
             <button onClick={openModal}>{injeung}</button>
             <Modal open={modalOpen} close={closeModal}>
-                <h1>IP 자동으로 불러오는 중...</h1>
+                <h1>위치 정보를 성공적으로 불러왔습니다.</h1>
             </Modal>
         </style.background>
     );

@@ -140,6 +140,9 @@ export const whemanchu = styled.div`
         margin-left: 40px;
         color: white;
         font-size: 35px;
+        :hover {
+            cursor: pointer;
+        }
     }
     > p {
         margin-top: 50vh;

@@ -15,6 +15,9 @@ const Render = () => {
     const thirdsign = () => {
         nav('/signup3')
     };
+    const gomain = () => {
+        nav('/')
+    };
     const [checkedList, setCheckedList] = useState([]);
     const onCheckedElement = (checked, item) => {
         if (checked) {
@@ -27,7 +30,7 @@ const Render = () => {
         <style.background>
             <style.loginbox>
                 <style.whemanchu>
-                    <h1>외만추</h1>
+                    <h1 onClick={gomain}>외만추</h1>
                     <p>당신이 가고 싶은 곳을 원하는 사람을 골라 함께 떠나보세요</p>
                 </style.whemanchu>
                 <h1>Welcome to 외만추</h1>

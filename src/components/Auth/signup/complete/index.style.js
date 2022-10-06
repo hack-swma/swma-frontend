@@ -16,65 +16,19 @@ export const loginbox = styled.div`
     margin: auto;
     background-color: white;
     border-radius: 10px;
-    > h1 {
-        margin-left: 47vw;
-        margin-top: 42px;
+    > .co {
+        margin-left: 48vw;
+        margin-top: 25vh;
+        font-size: 40px;
     }
-    > h2 {
-        font-size: 30px;
-        margin-lefT: 54vw;
-        margin-top: -2vh;
-    }
-    > .idp {
-        margin-left: 700px;
-        margin-top: 2vh;
-        color: #AFAFAF;
-    }
-    > .id {
-        margin-left: 700px;
-        width: 21vw;
-        height: 7vh;
-        font-size: 15px;
-        padding-left: 15px;
-    }
-    > button {
-        position: absolute;
-        margin-left: 20px;
-        width: 80px;
-        height: 7vh;
-        border: 0;
-        border-radius: 3px;
-        background-color: #597DFF;
-        > text {
-            color: white;
-        }
-        :hover {
-            cursor: pointer;
-        }
-    }
-    > .pwp {
-        margin-left: 700px;
-        margin-top: 20px;
-        color: #AFAFAF;
-    }
-    > .pw {
-        margin-left: 700px;
-        width: 21vw;
-        height: 7vh;
-        font-size: 15px;
-        padding-left: 15px;
-    }
-    > .pwc {
-        margin-left: 700px;
-        width: 21vw;
-        height: 7vh;
-        font-size: 15px;
-        padding-left: 15px;
+    > .me {
+        margin-left: 42vw;
+        font-size: 40px;
     }
     > .nextb {
         display: flex;
         margin-left: 46vw;
-        margin-top: 7vh;
+        margin-top: 13vh;
         width: 20vw;
         height: 7vh;
         border: 0px;

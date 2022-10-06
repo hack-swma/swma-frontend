@@ -2,11 +2,12 @@ import * as style from './index.style';
 import { useNavigate } from 'react-router-dom';
 import uploadbutton from '../../../../images/Main/uploade.png'
 import img from '../../../../images/Main/Group 65.png'
+import IPINJ from './ipmodal/index2';
 import { useState, useRef } from 'react';
 const Render = () => {
     const nav = useNavigate();
-    const fourthsign = () => {
-        nav('/signup4')
+    const clear = () => {
+        nav('/completesign')
     };
     const gomain = () => {
         nav('/')
@@ -33,18 +34,10 @@ const Render = () => {
                     <p>당신이 가고 싶은 곳을 원하는 사람을 골라 함께 떠나보세요</p>
                 </style.whemanchu>
                 <h1>Welcome to 외만추</h1>
-                <h2>3/4</h2>
-                <p className='profile'>프로필 사진</p>
-                <div class="filebox">
-                    <div className='pro'>
-                        {imageSrc && <img src={imageSrc} alt="preview-img" />}
-                    </div>
-                    <label for="file">파일 선택</label>
-                    <input type="file" id="file" onChange={handleChangeFile} multiple="multiple" />
-                </div>
-                <p className='ment'>자기소개</p>
-                <input type="text" className='textareas' placeholder='자기소개를 입력해주세요(20자~500자)' />
-                <button className='nextb' onClick={fourthsign}><text>Next →</text></button>
+                <h2>4/4</h2>
+                <h3>마지막 단계!</h3>
+                <button className='inj'><IPINJ/></button>
+                <button className='nextb' onClick={clear}><text>Sign up!</text></button>
             </style.loginbox>
         </style.background>
     );

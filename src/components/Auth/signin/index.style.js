@@ -19,6 +19,7 @@ export const loginbox = styled.div`
     > h1 {
         margin-left: 725px;
         margin-top: 42px;
+        
     }
     > .idp {
         margin-left: 730px;
@@ -94,6 +95,9 @@ export const whemanchu = styled.div`
         margin-left: 40px;
         color: white;
         font-size: 35px;
+        :hover {
+            cursor: pointer;
+        }
     }
     > p {
         margin-top: 50vh;

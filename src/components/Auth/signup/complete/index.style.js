@@ -16,6 +16,9 @@ export const loginbox = styled.div`
     margin: auto;
     background-color: white;
     border-radius: 10px;
+    
+    > .box{
+        
     > .co {
         margin-left: 48vw;
         margin-top: 25vh;
@@ -43,6 +46,7 @@ export const loginbox = styled.div`
             cursor: pointer;
         }
     }
+}
 `
 
 export const whemanchu = styled.div`
@@ -68,4 +72,5 @@ export const whemanchu = styled.div`
         font-size: 35px;
         font-weight: bold;
     }
+}
 `

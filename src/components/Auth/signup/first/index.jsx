@@ -15,6 +15,7 @@ const Render = () => {
                     <h1 onClick={gomain}>외만추</h1>
                     <p>당신이 가고 싶은 곳을 원하는 사람을 골라 함께 떠나보세요</p>
                 </style.whemanchu>
+                <div className='box'>
                     <h1>Welcome to 외만추</h1>
                     <h2>1/4</h2>
                         <p className='idp'>ID</p>
@@ -25,6 +26,7 @@ const Render = () => {
                         <p className='pwp'>PASSWORD CHECK</p>
                         <input className='pwc' placeholder='비밀번호 확인' />
                             <button className='nextb' onClick={secondsign}><text>Next →</text></button>
+                </div>
             </style.loginbox>
         </style.background>
     );

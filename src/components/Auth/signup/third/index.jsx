@@ -32,6 +32,7 @@ const Render = () => {
                     <h1 onClick={gomain}>외만추</h1>
                     <p>당신이 가고 싶은 곳을 원하는 사람을 골라 함께 떠나보세요</p>
                 </style.whemanchu>
+                <div className='box'>
                 <h1>Welcome to 외만추</h1>
                 <h2>3/4</h2>
                 <p className='profile'>프로필 사진</p>
@@ -45,6 +46,7 @@ const Render = () => {
                 <p className='ment'>자기소개</p>
                 <input type="text" className='textareas' placeholder='자기소개를 입력해주세요(20자~500자)' />
                 <button className='nextb' onClick={fourthsign}><text>Next →</text></button>
+                </div>
             </style.loginbox>
         </style.background>
     );

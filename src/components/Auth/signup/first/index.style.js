@@ -16,22 +16,20 @@ export const loginbox = styled.div`
     margin: auto;
     background-color: white;
     border-radius: 10px;
+    > .box{
+        margin-left: 50%;
     > h1 {
-        margin-left: 47vw;
         margin-top: 42px;
     }
     > h2 {
         font-size: 30px;
-        margin-lefT: 54vw;
         margin-top: -2vh;
     }
     > .idp {
-        margin-left: 700px;
         margin-top: 2vh;
         color: #AFAFAF;
     }
     > .id {
-        margin-left: 700px;
         width: 21vw;
         height: 7vh;
         font-size: 15px;
@@ -39,7 +37,6 @@ export const loginbox = styled.div`
     }
     > button {
         position: absolute;
-        margin-left: 20px;
         width: 80px;
         height: 7vh;
         border: 0;
@@ -53,19 +50,16 @@ export const loginbox = styled.div`
         }
     }
     > .pwp {
-        margin-left: 700px;
         margin-top: 20px;
         color: #AFAFAF;
     }
     > .pw {
-        margin-left: 700px;
         width: 21vw;
         height: 7vh;
         font-size: 15px;
         padding-left: 15px;
     }
     > .pwc {
-        margin-left: 700px;
         width: 21vw;
         height: 7vh;
         font-size: 15px;
@@ -73,7 +67,6 @@ export const loginbox = styled.div`
     }
     > .nextb {
         display: flex;
-        margin-left: 46vw;
         margin-top: 7vh;
         width: 20vw;
         height: 7vh;
@@ -89,6 +82,7 @@ export const loginbox = styled.div`
             cursor: pointer;
         }
     }
+}
 `
 
 export const whemanchu = styled.div`

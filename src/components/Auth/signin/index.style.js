@@ -16,30 +16,27 @@ export const loginbox = styled.div`
     margin: auto;
     background-color: white;
     border-radius: 10px;
+    > .box{
+        margin-left: 50%;
     > h1 {
-        margin-left: 725px;
         margin-top: 42px;
-        
+        font-size: calc((100vw / 1240) * 27);
     }
     > .idp {
-        margin-left: 730px;
         margin-top: 50px;
         color: #AFAFAF;
     }
     > .id {
-        margin-left: 730px;
         width: 16vw;
         height: 7vh;
         font-size: 15px;
         padding-left: 15px;
     }
     > .pwp {
-        margin-left: 730px;
         margin-top: 35px;
         color: #AFAFAF;
     }
     > .pw {
-        margin-left: 730px;
         width: 16vw;
         height: 7vh;
         font-size: 15px;
@@ -47,7 +44,6 @@ export const loginbox = styled.div`
     }
     > .log{
         display: flex;
-        margin-left: 730px;
         margin-top: 60px;
         width: 16vw;
         height: 7vh;
@@ -65,7 +61,6 @@ export const loginbox = styled.div`
     }
     > .sign {
         display: flex;
-        margin-left: 730px;
         margin-top: 20px;
         width: 16vw;
         height: 7vh;
@@ -81,7 +76,7 @@ export const loginbox = styled.div`
             cursor: pointer;
         }
     }
-
+}
 `
 
 export const whemanchu = styled.div`
@@ -94,17 +89,17 @@ export const whemanchu = styled.div`
     > h1 {
         margin-left: 40px;
         color: white;
-        font-size: 35px;
+        font-size: calc((100vw / 1240) * 35);
         :hover {
             cursor: pointer;
         }
     }
     > p {
-        margin-top: 50vh;
+        margin-top: 65%;
         margin-left: 40px;
         margin-right: 40px;
         color: white;
-        font-size: 35px;
+        font-size: calc((100vw /1240) * 35);
         font-weight: bold;
     }
 `

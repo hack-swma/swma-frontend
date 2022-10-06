@@ -33,11 +33,13 @@ const Render = () => {
                     <h1 onClick={gomain}>외만추</h1>
                     <p>당신이 가고 싶은 곳을 원하는 사람을 골라 함께 떠나보세요</p>
                 </style.whemanchu>
-                <h1>Welcome to 외만추</h1>
-                <h2>4/4</h2>
-                <h3>마지막 단계!</h3>
-                <button className='inj'><IPINJ/></button>
-                <button className='nextb' onClick={clear}><text>Sign up!</text></button>
+                <div className='box'>
+                    <h1>Welcome to 외만추</h1>
+                    <h2>4/4</h2>
+                    <h3>마지막 단계!</h3>
+                    <button className='inj'><IPINJ /></button>
+                    <button className='nextb' onClick={clear}><text>Sign up!</text></button>
+                </div>
             </style.loginbox>
         </style.background>
     );

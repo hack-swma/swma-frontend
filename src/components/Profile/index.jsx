@@ -10,8 +10,9 @@ import { useState } from 'react'
 
 const Render = () => {
     const starList = [0, 0, 0, 0, 0]
-    const [rate, setRate] = useState(1);
+    const [givingRate, setGivingRate] = useState(1);
     const [certified, setCertified] = useState(false);
+    const rating = 4.4;
     return (
         <>
             <style.background>
@@ -34,11 +35,24 @@ const Render = () => {
                                 <style.profileGenderAgeText>나이 | 30</style.profileGenderAgeText>
                                 <style.profileGenderAgeText>성별 | 남</style.profileGenderAgeText>
                             </style.profileGenderAgeContainer>
+                            <style.profileIntroduceContainer>
+                                <style.profileIntroduceTitleText>자기소개</style.profileIntroduceTitleText>
+                                <style.profileIntroduceBox>
+                                    <style.profileIntroduceText>자기 소개 텍스트 자기 소개 텍스트 자기 소개 텍스트 자기 소개 텍스트 자기 소개 텍스트 자기 소개 텍스트 </style.profileIntroduceText>
+                                </style.profileIntroduceBox>
+                            </style.profileIntroduceContainer>
+                            <style.profileRatingContainer>
+                                <style.profileRatingText>평점</style.profileRatingText>
+                                <style.profileRatingStarContainer>
+                                    { starList.map((element) => {
+                                        return (
+                                            <style.profileRatingStar>★</style.profileRatingStar>
+                                        )
+                                    }) }
+                                </style.profileRatingStarContainer>
+                            </style.profileRatingContainer>
                         </style.profileInfoContainer>
                     </style.profileContainer>
-                    <style.introduceContainer>
-
-                    </style.introduceContainer>
                 </style.mainWrapper>
             </style.background>
             <style.reviewContainer>
@@ -47,7 +61,7 @@ const Render = () => {
                     <style.reviewStarContainer>
                         { starList.map((element, idx) => {
                             return (
-                                <style.reviewStar nowRate={rate} level={idx} onClick={() => {setRate(idx)}}>★</style.reviewStar>
+                                <style.reviewStar nowRate={givingRate} level={idx} onClick={() => {setGivingRate(idx)}}>★</style.reviewStar>
                                 )
                             }) }
                     </style.reviewStarContainer>

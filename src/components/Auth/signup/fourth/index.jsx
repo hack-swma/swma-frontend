@@ -2,6 +2,7 @@ import * as style from './index.style';
 import { useNavigate } from 'react-router-dom';
 import uploadbutton from '../../../../images/Main/uploade.png'
 import img from '../../../../images/Main/Group 65.png'
+import IPINJ from './ipmodal/index2';
 import { useState, useRef } from 'react';
 const Render = () => {
     const nav = useNavigate();
@@ -35,7 +36,7 @@ const Render = () => {
                 <h1>Welcome to 외만추</h1>
                 <h2>4/4</h2>
                 <h3>마지막 단계!</h3>
-                <button className='inj'><text>IP 인증하기</text></button>
+                <button className='inj'><IPINJ/></button>
                 <button className='nextb' onClick={clear}><text>Sign up!</text></button>
             </style.loginbox>
         </style.background>

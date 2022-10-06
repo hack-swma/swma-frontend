@@ -1,27 +1,9 @@
 import * as style from './index.style';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-
 const Render = () => {
-    const L_LIST = [
-        { id: 0, data: '한국어' },
-        { id: 1, data: '일본어' },
-        { id: 2, data: '중국어' },
-        { id: 3, data: '불어' },
-        { id: 4, data: '영어' },
-        { id: 5, data: '독일어' },
-    ]
     const nav = useNavigate();
-    const thirdsign = () => {
-        nav('/signup3')
-    };
-    const [checkedList, setCheckedList] = useState([]);
-    const onCheckedElement = (checked, item) => {
-        if (checked) {
-            setCheckedList([...checkedList, item]);
-        } else if (!checked) {
-            setCheckedList(checkedList.filter(el => el !== item));
-        }
+    const fourthsign = () => {
+        nav('/signup4')
     };
     return (
         <style.background>

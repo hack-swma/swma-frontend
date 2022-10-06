@@ -62,8 +62,8 @@ export const postContainer = styled.div`
     align-items: center;
     border: 5px solid #DADADA;
     border-radius: 20px;   
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 1%;
+    padding-right: 3%;
 `
 export const postProfileImageContainer = styled.div`
     width: 20%;
@@ -85,15 +85,27 @@ export const postProfileInfoContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    position: relative;
     padding-left: 20px;
+    gap: 5%;
 `
 export const postProfileInfoName = styled.span`
-    font-size: calc((100vw / 1240) * 38.8);
+    font-size: calc((100vw / 1240) * 34.8);
     font-weight: bold;
 `
+export const postProfileInfoLocationContainer = styled.div`
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 10px;
+`
 export const postProfileInfoLocation = styled.span`
-    font-size: calc((100vw / 1240) * 32.5);
+    font-size: calc((100vw / 1240) * 25.5);
     color: gray;
+`
+export const postProfileInfoLocationIcon = styled.img`
+    width: 2.5vw;
+    aspect-ratio: 1 / 1;
 `
 export const postProfileViewProfileMessageContainer = styled.div`
     width: 20%;

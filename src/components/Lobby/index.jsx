@@ -3,6 +3,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'
 
 import Image from './profileImage.png'
+import locationIcon from './locationIcon.png'
+import nationIcon from './nationIcon.png'
 
 import * as style from './index.style';
 
@@ -56,8 +58,14 @@ const Render = () => {
                                 </style.postProfileImageContainer>
                                 <style.postProfileInfoContainer>
                                     <style.postProfileInfoName>{dummyData.name}</style.postProfileInfoName>
-                                    <style.postProfileInfoLocation>{dummyData.location}</style.postProfileInfoLocation>
-                                    <style.postProfileInfoLocation>{dummyData.from}</style.postProfileInfoLocation>
+                                    <style.postProfileInfoLocationContainer>
+                                        <style.postProfileInfoLocationIcon src={locationIcon}/>
+                                        <style.postProfileInfoLocation>{dummyData.location}</style.postProfileInfoLocation>
+                                    </style.postProfileInfoLocationContainer>
+                                    <style.postProfileInfoLocationContainer>
+                                        <style.postProfileInfoLocationIcon src={nationIcon}/>
+                                        <style.postProfileInfoLocation>{dummyData.from}</style.postProfileInfoLocation>
+                                    </style.postProfileInfoLocationContainer>
                                 </style.postProfileInfoContainer>
                                 <style.postProfileViewProfileMessage>프로필 보기</style.postProfileViewProfileMessage>
                             </style.postContainer>

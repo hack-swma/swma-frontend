@@ -1,4 +1,7 @@
 import { useEffect } from 'react'
+
+import axios from 'axios'
+
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 
@@ -18,10 +21,24 @@ const Render = () => {
         profileImage: Image,
     }
     const postList = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    
     useEffect(() => {
         AOS.init()
         AOS.refresh()
     }, [])
+
+    useEffect(() => {
+        const getProfileList = () => {
+            axios.get('user/main')
+            .then((response) => {
+                console.log(response)
+            }).catch((error) => {
+                console.log(error)
+            })
+        }
+        getProfileList()
+    }, [])
+
     return (
         <style.background>
             <style.mainWrapper>

@@ -14,6 +14,7 @@ export const mainWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     margin-top: 100px;
     gap: 20px;
 `
@@ -23,7 +24,7 @@ export const textContainer = styled.div`
     flex-direction: column;
 `
 export const titleText = styled.span`
-    font-size: 50px;
+    font-size: calc((100vw / 1240) * 39.6);
     font-weight: bold;
     color: ${(props) => props.color ? props.color : 'black'};
     transition: .15s ease-in-out;
@@ -55,10 +56,9 @@ export const postWrapper = styled.div`
 `
 export const postContainer = styled.div`
     width: 100%;
-    aspect-ratio: 1 / 0.25;
     max-height: 200px;
+    aspect-ratio: 1 / 0.25;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     border: 5px solid #DADADA;
     border-radius: 20px;   
@@ -73,8 +73,8 @@ export const postProfileImageContainer = styled.div`
     align-items: center;
 `
 export const postProfileImage = styled.img`
-    height: 90%;
-    max-height: 150px;
+    width: 100%;
+    max-width: 150px;
     aspect-ratio: 1 / 1;
     border-radius: 100%;
 `
@@ -88,11 +88,11 @@ export const postProfileInfoContainer = styled.div`
     padding-left: 20px;
 `
 export const postProfileInfoName = styled.span`
-    font-size: 48px;
+    font-size: calc((100vw / 1240) * 38.8);
     font-weight: bold;
 `
 export const postProfileInfoLocation = styled.span`
-    font-size: 30px;
+    font-size: calc((100vw / 1240) * 32.5);
     color: gray;
 `
 export const postProfileViewProfileMessageContainer = styled.div`
@@ -103,7 +103,7 @@ export const postProfileViewProfileMessageContainer = styled.div`
     align-items: center;
 `
 export const postProfileViewProfileMessage = styled.span`
-    font-size: 40px;
+    font-size: calc((100vw / 1240) * 33);
     color: darkgray;
     text-overflow: clip;
 `

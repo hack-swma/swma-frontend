@@ -27,17 +27,17 @@ const Render = () => {
         AOS.refresh()
     }, [])
 
-    useEffect(() => {
-        const getProfileList = () => {
-            axios.get('user/main')
-            .then((response) => {
-                console.log(response)
-            }).catch((error) => {
-                console.log(error)
-            })
-        }
-        getProfileList()
-    }, [])
+    // useEffect(() => {
+    //     const getProfileList = () => {
+    //         axios.get('user/main')
+    //         .then((response) => {
+    //             console.log(response)
+    //         }).catch((error) => {
+    //             console.log(error)
+    //         })
+    //     }
+    //     getProfileList()
+    // }, [])
 
     return (
         <style.background>

@@ -1,8 +1,12 @@
 import * as style from './index.style';
+
+import { useRecoilState } from 'recoil';
+import { descriptionState } from '../../../../stores/atom';
+
 import { useNavigate } from 'react-router-dom';
 import uploadbutton from '../../../../images/Main/uploade.png'
 import img from '../../../../images/Main/Group 65.png'
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 const Render = () => {
     const nav = useNavigate();
     const fourthsign = () => {
@@ -22,9 +26,14 @@ const Render = () => {
         });
     }
     const [imageSrc, setImageSrc] = useState('https://cdn-icons-png.flaticon.com/512/1250/1250689.png');
+    const [description, setDescription] = useRecoilState(descriptionState)
     const handleChangeFile = (e) => {
         encodeFile(e.target.files[0]);
     }
+    useEffect(() => {
+        setDescription('')
+    }, [])
+
     return (
         <style.background>
             <style.loginbox>
@@ -44,7 +53,7 @@ const Render = () => {
                     <input type="file" id="file" onChange={handleChangeFile} multiple="multiple" />
                 </div>
                 <p className='ment'>자기소개</p>
-                <input type="text" className='textareas' placeholder='자기소개를 입력해주세요(20자~500자)' />
+                <input type="text" className='textareas' placeholder='자기소개를 입력해주세요 (20자 ~ 500자)' value={description} onChange={(e) => {setDescription(e.target.value)}}/>
                 <button className='nextb' onClick={fourthsign}><text>Next →</text></button>
                 </div>
             </style.loginbox>

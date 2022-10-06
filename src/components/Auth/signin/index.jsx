@@ -1,6 +1,9 @@
 import * as style from './index.style';
+import { useState, useEffect } from 'react'
+
 import { useNavigate } from 'react-router-dom';
 const Render = () => {
+    
     const nav = useNavigate();
     const gosignup = () => {
         nav('/signup');

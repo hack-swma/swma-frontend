@@ -1,8 +1,22 @@
 import * as style from './index.style';
+
+import { useRecoilState } from 'recoil';
+import { nameState, birthinfoState, sexState } from '../../../../stores/atom';
+
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Render = () => {
+    const [name, setName] = useRecoilState(nameState)
+    const [birthinfo, setBirthinfo] = useRecoilState(birthinfoState)
+    const [sex, setSex] = useRecoilState(sexState)
+
+    useEffect(() => {
+        setName('')
+        setBirthinfo('')
+        setSex('')
+    }, [])
+
     const L_LIST = [
         { id: 0, data: '한국어' },
         { id: 1, data: '일본어' },
@@ -11,6 +25,14 @@ const Render = () => {
         { id: 4, data: '영어' },
         { id: 5, data: '독일어' },
     ]
+    const koreanToEnglist = {
+        '한국어': 'KOREAN',
+        '일본어': 'JAPANESE',
+        '중국어': 'CHINESE',
+        '불어': 'FRENCH',
+        '영어': 'ENGLISH',
+        '독일어': 'GERMAN',
+    }
     const nav = useNavigate();
     const thirdsign = () => {
         nav('/signup3')
@@ -26,6 +48,7 @@ const Render = () => {
             setCheckedList(checkedList.filter(el => el !== item));
         }
     };
+    console.log(checkedList)
     return (
         <style.background>
             <style.loginbox>
@@ -37,9 +60,9 @@ const Render = () => {
                     <h1>Welcome to 외만추</h1>
                     <h2>2/4</h2>
                     <p className='name'>이름</p>
-                    <input className='named' placeholder='ex) 외만추' />
+                    <input className='named' placeholder='ex) 외만추' value={name} onChange={(e) => {setName(e.target.value)}}/>
                     <p className='birthday'>생년월일</p>
-                    <input className='birthdaye' placeholder='ex) 20000103' />
+                    <input className='birthdaye' placeholder='ex) 20000103' value={birthinfo} onChange={(e) => {setBirthinfo(e.target.value)}}/>
                     <p className='gender'>성별</p>
                     <div className='gendered'>
                         <label className='genderone'>

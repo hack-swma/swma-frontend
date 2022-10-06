@@ -31,6 +31,7 @@ const Render = () => {
                     <p>당신이 가고 싶은 곳을 원하는 사람을 골라 함께 떠나보세요</p>
                 </style.whemanchu>
                 <h1>Welcome to 외만추</h1>
+                <h2>2/4</h2>
                 <p className='name'>이름</p>
                 <input className='named' placeholder='ex) 외만추' />
                 <p className='birthday'>생년월일</p>

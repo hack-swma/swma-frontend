@@ -20,9 +20,14 @@ export const loginbox = styled.div`
         margin-left: 47vw;
         margin-top: 42px;
     }
+    > h2 {
+        font-size: 30px;
+        margin-lefT: 54vw;
+        margin-top: -2vh;
+    }
     > .name {
         margin-left: 45.4vw;
-        margin-top: 8vh;
+        margin-top: 1vh;
         color: #AFAFAF;
     }
     > .named {

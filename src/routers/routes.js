@@ -9,6 +9,7 @@ import FourthSignup from '../components/Auth/signup/fourth/index'
 import CompleteSignup from '../components/Auth/signup/complete/index';
 import Lobby from '../components/Lobby/index'
 import Profile from '../components/Profile/index'
+import Look from '../components/lookarticle/index'
 import Write from '../components/writearticle/index'
 
 export default [
@@ -23,5 +24,6 @@ export default [
     { path: '/completesign', component: <CompleteSignup />, nav: false, footer: false},
     { path: '/lobby', component: <Lobby/>, nav: true, footer: true },
     { path: '/profile', component: <Profile/>, nav: true, footer: true },
-    { path: '/write', component: <Write />, nav: true, footer: true},
+    { path: '/look', component: <Look />, nav: true, footer: true},
+    { path : '/write', component: <Write />, nav: true, footer: true}
 ]

@@ -3,8 +3,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'
 
 import Image from './profileImage.png'
-import locationIcon from './locationIcon.png'
-import nationIcon from './nationIcon.png'
+import locationIcon from '../../images/Lobby/locationIcon.png'
+import nationIcon from '../../images/Lobby/nationIcon.png'
 
 import * as style from './index.style';
 
@@ -29,18 +29,16 @@ const Render = () => {
                     <div>
                         <style.titleText color='#14C2F9'>원하는 지역</style.titleText>
                         <style.titleText>에서, </style.titleText>
-                        <style.titleText color='#1564FF'>원하는 사람</style.titleText>
-                        <style.titleText>들과</style.titleText>
-                    </div>
-                    <div>
                         <style.titleText>당신과 </style.titleText>
                         <style.titleText color='#FF8383'>여정</style.titleText>
                         <style.titleText>을 함께 할 </style.titleText>
-                        <style.titleText color='#1564FF'>사람</style.titleText>
+                    </div>
+                    <div>
+                        <style.titleText color='#1564FF'>원하는 사람</style.titleText>
                         <style.titleText>을 찾아보세요</style.titleText>
                     </div>
                 </style.textContainer>
-                <style.regionButtonContainer data-aos='fade-up' data-aos-delay='500'>
+                <style.regionButtonContainer data-aos='fade-up' data-aos-delay='750'>
                     <style.regionSelectButton name='region'>
                         { countryList.map((element, idx) => {
                             return (
@@ -49,7 +47,7 @@ const Render = () => {
                         }) }
                     </style.regionSelectButton>
                 </style.regionButtonContainer>
-                <style.postWrapper data-aos='fade-up' data-aos-delay='1000'>
+                <style.postWrapper data-aos='fade-up' data-aos-delay='1500'>
                     { postList.map((element, idx) => {
                         return (
                             <style.postContainer data-aos='fade-up'>

@@ -31,7 +31,7 @@ const Render = () => {
                                 <p>
                                 <style.sliderText>여행을 떠나고 싶은데,</style.sliderText>
                                 </p>
-                                <style.sliderText color='#00ffc2'>같이 떠날 사람</style.sliderText>
+                                <style.sliderText color='#00ffc2'>함께 할 사람</style.sliderText>
                                 <style.sliderText>이 없다면?</style.sliderText>
                                 <style.sliderUnderText>바로가기 →</style.sliderUnderText>
                             </style.sliderImage>
@@ -40,7 +40,7 @@ const Render = () => {
                 }
             </style.slider>
             <Link to='/lobby'>
-                <style.navigateButton>같이 떠날 사람 찾아보기</style.navigateButton>
+                <style.navigateButton>둘러보러 가기</style.navigateButton>
             </Link>
         </style.background>
         </>

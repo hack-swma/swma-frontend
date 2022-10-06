@@ -104,8 +104,9 @@ export const postProfileInfoLocation = styled.span`
     color: gray;
 `
 export const postProfileInfoLocationIcon = styled.img`
-    width: 2.5vw;
+    width: 2.2vw;
     aspect-ratio: 1 / 1;
+    user-select: none;
 `
 export const postProfileViewProfileMessageContainer = styled.div`
     width: 20%;
@@ -116,6 +117,6 @@ export const postProfileViewProfileMessageContainer = styled.div`
 `
 export const postProfileViewProfileMessage = styled.span`
     font-size: calc((100vw / 1240) * 33);
-    color: darkgray;
+    color: #818181;
     text-overflow: clip;
 `

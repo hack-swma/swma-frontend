@@ -6,6 +6,7 @@ import Signup from '../components/Auth/signup/first/index'
 import SecondSignup from '../components/Auth/signup/second/index'
 import ThirdSignup from '../components/Auth/signup/third/index';
 import Lobby from '../components/Lobby/index'
+import Profile from '../components/Profile/index'
 
 export default [
     { path: '', component: <Main/>, nav: true, footer: true },
@@ -16,4 +17,5 @@ export default [
     { path: '/signup2', component: <SecondSignup />, nav: false, footer: false},
     { path: '/signup3', component: <ThirdSignup />, nav: false, footer: false},
     { path: '/lobby', component: <Lobby/>, nav: true, footer: true },
+    { path: '/profile', component: <Profile/>, nav: true, footer: true },
 ]

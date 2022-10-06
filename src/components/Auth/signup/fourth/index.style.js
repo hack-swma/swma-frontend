@@ -22,64 +22,31 @@ export const loginbox = styled.div`
     }
     > h2 {
         font-size: 30px;
-        margin-lefT: 54vw;
+        margin-left: 54vw;
         margin-top: -2vh;
     }
-    > .profile {
-        margin-left: 45.4vw;
-        margin-top: 1vh;
-        color: #AFAFAF;
+    > h3 {
+        font-size: 24px;
+        margin-left: 52vw;
+        margin-top: 10vh;
     }
-    
-    > .filebox {
-        position:absolute;
-        margin-left: 5vw;
-        margin-top: 5vh;
-        > .pro {
-            margin-left: 40.3vw;
-            margin-top: -5vh;
-            > img {
-            width: 8vw;
-            height: 16vh;
-            }
-        }
-        > label {
-            display: inline-block;
-            margin-top: -20vh;
-            padding: 10px 20px;
-            color: #fff;
-            vertical-align: middle;
-            background-color: #597DFF;
-            cursor: pointer;
-            height: 40px;
-            margin-left: 50vw;
-            border-radius: 5px;
-        }
-        > input[type="file"] {
-            position: absolute;
-            width: 0;
-            height: 0;
-            padding: 0;
-            overflow: hidden;
-            border: 0;
+    > .inj {
+        margin-left: 48vw;
+        margin-top: 10vh;
+        width: 16vw;
+        height: 8vh;
+        border: 0;
+        border-radius: 10px;
+        background-color: #597DFF;
+        > text {
+            font-size: 24px;
+            color: white;
         }
     }
-    > .ment {
-        position: absolute;
-        margin-left: 45.4vw;
-        margin-top: 18vh;
-        color: #AFAFAF;
-    }
-    .textareas {
-        margin-left: 45.4vw;
-        margin-top: 23vh;
-        width: 20vw;
-        height: 15vh;
-        padding-left: 1vw;
-    }
-    .nextb {
-        margin-top: 6vh;
+    > .nextb {
+        display: flex;
         margin-left: 46vw;
+        margin-top: 13vh;
         width: 20vw;
         height: 7vh;
         border: 0px;
